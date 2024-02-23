@@ -63,10 +63,30 @@ export default function (props) {
           </div>
           <div className="form-group mt-3">
             <label>Full Name</label>
-            <input
-              type="email"
+            <input type="text"
               className="form-control mt-1"
               placeholder="e.g Jane Doe"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Password</label>
+            <input type="password"
+              className="form-control mt-1"
+              placeholder="Your password"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>RePassword</label>
+            <input type="password"
+              className="form-control mt-1"
+              placeholder="confirm password"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>phone</label>
+            <input type="text"
+              className="form-control mt-1"
+              placeholder="Your phone"
             />
           </div>
           <div className="form-group mt-3">
@@ -77,14 +97,7 @@ export default function (props) {
               placeholder="Email Address"
             />
           </div>
-          <div className="form-group mt-3">
-            <label>Password</label>
-            <input
-              type="password"
-              className="form-control mt-1"
-              placeholder="Password"
-            />
-          </div>
+        
           <div className="d-grid gap-2 mt-3">
             <button type="submit" className="btn btn-primary">
               Submit
