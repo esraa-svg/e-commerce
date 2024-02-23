@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import connectDB from './config/dp.js';
 import products from './data/products.js';
 import userRoutes from './routes/userRoutes.js'
+import { errorHandler, notFound } from './middleware/errorMiddleware.js'; 
+
 
 dotenv.config();
 connectDB();
@@ -15,6 +17,7 @@ app.get('/', (req,res) =>{
 });
 
 
+
 app.use('/api/users', userRoutes)
 
 app.get('/api/products', (req,res) => {
@@ -25,6 +28,9 @@ app.get('/api/products/:id', (req,res) => {
 const product = products.find((p) => p._id === parseInt(req.params.id)); 
     res.json(product);
 });
+
+// app.use(notFound);
+// app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000
 
